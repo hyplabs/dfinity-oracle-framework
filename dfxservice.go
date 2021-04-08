@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hyplabs/dfinity-oracles/models"
-	"github.com/hyplabs/dfinity-oracles/utils"
+	"github.com/hyplabs/dfinity-oracle-framework/models"
+	"github.com/hyplabs/dfinity-oracle-framework/utils"
 	"github.com/sirupsen/logrus"
 )
 

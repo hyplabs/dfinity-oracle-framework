@@ -34,10 +34,10 @@ go mod init github.com/YOUR_USERNAME/sample-oracle
 Install the framework, `dfinity-oracles`, as a Go Module dependancy:
 
 ```bash
-go get github.com/hyplabs/dfinity-oracles
+go get github.com/hyplabs/dfinity-oracle-framework
 ```
 
-Note that if you are trying this tutorial before Dfinity Oracles has been publicly released, you'll want to use the following command instead: `GOPRIVATE=github.com/hyplabs/dfinity-oracles GIT_TERMINAL_PROMPT=1 go get github.com/hyplabs/dfinity-oracles`.
+Note that if you are trying this tutorial before Dfinity Oracles has been publicly released, you'll want to use the following command instead: `GOPRIVATE=github.com/hyplabs/dfinity-oracle-framework GIT_TERMINAL_PROMPT=1 go get github.com/hyplabs/dfinity-oracle-framework`.
 
 ## Step 2: Get API endpoints for external data sources
 
@@ -58,8 +58,8 @@ package main
 import (
 	"time"
 
-	framework "github.com/hyplabs/dfinity-oracles"
-	"github.com/hyplabs/dfinity-oracles/models"
+	framework "github.com/hyplabs/dfinity-oracle-framework"
+	"github.com/hyplabs/dfinity-oracle-framework/models"
 )
 
 func main() {
@@ -112,10 +112,10 @@ func main() {
 Let's take a look at the key parts of this sample oracle:
 
 - `tokyoEndpoints` and `delhiEndpoints` specify the URLs where the temperature data can be found, as well as [JSONPath](https://www.baeldung.com/guide-to-jayway-jsonpath) expressions that extract just the temperature (in Celsius) out of the JSON response.
-    - `Endpoint` is the URL. In this case, we've entered the WeatherAPI and WeatherBit API endpoint URLs here.
-    - `JSONPaths` is a map of JSONPath expressions and the relevant info that they retrieve. In this case, the only piece of relevant info is `temperature_celsius`.
+  - `Endpoint` is the URL. In this case, we've entered the WeatherAPI and WeatherBit API endpoint URLs here.
+  - `JSONPaths` is a map of JSONPath expressions and the relevant info that they retrieve. In this case, the only piece of relevant info is `temperature_celsius`.
 - `metadata` specifies the two pieces of data that we care about - the temperature in Tokyo, and the temperature in Delhi.
-    - In this example, since the `SummaryFunc` option of `metadata` isn't specified, a default summarization function will be applied, which simply takes the `temperature_celsius` key from the API call results, eliminates outliers (outside 2 standard deviations), and takes the average of the remaining values to obtain the final temperature.
+  - In this example, since the `SummaryFunc` option of `metadata` isn't specified, a default summarization function will be applied, which simply takes the `temperature_celsius` key from the API call results, eliminates outliers (outside 2 standard deviations), and takes the average of the remaining values to obtain the final temperature.
 - `config` specifies the `CanisterName` and `UpdateInterval` - what the canister should be called, and how often it should update.
 - We create a new oracle struct by calling `NewOracle(&config)`.
 - We bootstrap the new oracle by calling `oracle.Bootstrap()`.

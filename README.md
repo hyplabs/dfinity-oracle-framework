@@ -1,6 +1,6 @@
 # Dfinity Oracles
 
-[Dfinity Oracles](https://github.com/hyplabs/dfinity-oracles) is a framework for building [blockchain oracles](https://en.wikipedia.org/wiki/Blockchain_oracle) for the [Internet Computer](https://dfinity.org/).
+[Dfinity Oracles](https://github.com/hyplabs/dfinity-oracle-framework) is a framework for building [blockchain oracles](https://en.wikipedia.org/wiki/Blockchain_oracle) for the [Internet Computer](https://dfinity.org/).
 
 ## Table of Contents
 
