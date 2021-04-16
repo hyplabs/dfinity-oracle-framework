@@ -99,7 +99,7 @@ dfx canister call weather_oracle get_map_field_value ("London", "temperature_cel
 
 This would return the currently stored temperature in Celsius of London within the canister.
 
-Simiarly,
+Similarly,
 
 ```bash
 dfx canister call weather_oracle get_map_field_value ("Tokyo", "humidity_pct")
