@@ -2,7 +2,7 @@
 
 For this tutorial, we will create a sample oracle for fetching the current temperature in different cities, using Dfinity Oracles. To read more about the framework itself, see the [README](../README.md).
 
-This sample oracle is also available as a complete project, [Dfinity Weather Oracle Example](https://github.com/hyplabs/dfinity-weather-oracle)!
+This sample oracle is also available as a complete project, [Dfinity Weather Oracle Example](https://github.com/hyplabs/dfinity-oracle-weather)!
 
 ## Table of Contents
 
