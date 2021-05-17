@@ -4,7 +4,7 @@ import (
 	"math"
 )
 
-// Mean: Returns the man of the dataset
+// Mean: Returns the mean of the dataset
 func Mean(dataset []map[string]float64) map[string]float64 {
 	result := make(map[string]float64)
 
