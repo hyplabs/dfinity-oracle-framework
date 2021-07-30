@@ -125,11 +125,11 @@ func (s *DFXService) isCanisterRunning() (bool, error) {
 		s.log.WithError(err).Errorln("Could not determine canister status:", output)
 		return false, err
 	}
-	if !strings.HasPrefix(output, "Canister "+s.config.CanisterName+"'s status is ") {
+	if !strings.HasPrefix(output, "Canister status call result for " + s.config.CanisterName) {
 		s.log.WithError(err).Errorln("Could not determine canister status:", output)
 		return false, fmt.Errorf("Could not determine canister status: %v", output)
 	}
-	isRunning := strings.HasPrefix(output, "Canister "+s.config.CanisterName+"'s status is Running.")
+	isRunning := strings.HasPrefix(output, "Status: Running")
 	return isRunning, nil
 }
 
