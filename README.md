@@ -26,8 +26,8 @@ Oracles are useful here in order to move information from traditional APIs to so
 ## Tutorial and Examples
 
 - [Tutorial](docs/tutorial.md) - step-by-step setup of a sample oracle for retrieving the temperature in different cities.
-- [Dfinity Weather Oracle Example](https://github.com/hyplabs/dfinity-weather-oracle) - a complete working example oracle for retrieving various weather conditions in 20 different cities.
-- [Dfinity Crypto Oracle Example](https://github.com/hyplabs/dfinity-crypto-oracle) - a complete working example oracle for retrieving current ETH and BTC prices.
+- [Dfinity Weather Oracle Example](https://github.com/hyplabs/dfinity-oracle-weather) - a complete working example oracle for retrieving various weather conditions in 20 different cities.
+- [Dfinity Crypto Oracle Example](https://github.com/hyplabs/dfinity-oracle-crypto) - a complete working example oracle for retrieving current ETH and BTC prices.
 
 ## Framework Reference
 
